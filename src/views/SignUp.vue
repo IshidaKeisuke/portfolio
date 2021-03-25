@@ -1,0 +1,61 @@
+<template>
+    <div>
+        <Header/>
+        <div class="wrapper">
+        <div class="card">
+        <p>新規登録</p>
+        <div class = "form">
+            <input placeholder="ユーザーネーム" type = "text">
+            <input placeholder="プロフィール" type = "text">
+            <input placeholder="メールアドレス" type = "email">
+            <input placeholder="パスワード" type = "password">
+            <button @click="auth">新規登録</button>
+        </div>
+        </div>
+        </div>
+        </div>
+</template>
+
+<script>
+import Header from '../components/Header';
+export default {
+  components: {
+    Header
+  }
+};
+</script>
+
+<style scoped>
+.wrapper{
+    background: url("https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80");
+    background-size: 100%;
+    margin-top: -7%;
+}
+.card{
+    text-align: center;
+    margin: 100px auto;
+    width: 450px;
+    padding: 10%;
+}
+.form{
+    text-align: center;
+}
+input {
+  margin-top: 15px;
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  color: black;
+}
+button{
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: royalblue;
+    color: beige;
+    cursor: pointer;
+    width: 100px;
+}
+</style>
