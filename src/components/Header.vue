@@ -19,6 +19,7 @@
     }
     .header p{
         cursor: pointer;
+        margin-left: 20px;
     }
     .New{
         margin-right: 40px;
