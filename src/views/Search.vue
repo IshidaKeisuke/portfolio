@@ -3,25 +3,17 @@
         <Header/>
         <div class = "item">
             <input placeholder="キーワード">
-            <button>検索</button>
+            <button @click="$router.push('/Searchresult')">検索</button>
         </div>
     </div>
 </template>
 
 <script>
 import Header from '../components/Header';
-import axios from "axios";
 export default {
     components:{
         Header
     },
-    async created(){
-    const item = await axios.get(
-        `http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=[b65e720bb6d57313]&large_area=Z011`
-    );
-    const fooddata = item.data;
-    this.name = fooddata.name
-    }
 }
 </script>
 

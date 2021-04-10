@@ -30,6 +30,9 @@ const routes = [{
     path:'/Search',
     name:'Search',
     component:Search
+  },{
+    path:'/Searchresult',
+    name:'Searchresult'
   }
 ]
 
