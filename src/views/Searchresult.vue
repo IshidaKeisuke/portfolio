@@ -18,6 +18,7 @@ export default {
     );
     const fooddata = item.data;
     this.name = fooddata.name
+    console.log(item);
     }
 }
 </script>
