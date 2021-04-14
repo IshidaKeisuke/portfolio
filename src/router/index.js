@@ -4,7 +4,8 @@ import Home from '../views/Home.vue'
 import SignUp from '../views/SignUp.vue'
 import Login from '../views/Login.vue'
 import Search from '../views/Search.vue'
-  
+import Searchresult from '../views/Searchresult.vue'
+
 Vue.use(VueRouter)
 
 const routes = [{
@@ -32,7 +33,8 @@ const routes = [{
     component:Search
   },{
     path:'/Searchresult',
-    name:'Searchresult'
+    name:'Searchresult',
+    component:Searchresult
   }
 ]
 
