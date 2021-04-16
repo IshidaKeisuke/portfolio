@@ -7,14 +7,20 @@
 
 <script>
 import Header from '../components/Header';
+import Search from '../views/Search';
 import axios from "axios"
+
 export default {
     components:{
         Header
     },
+    views:{
+        Search
+    },
+    props:["name"],
     async created(){
     const item = await axios.get(
-        `http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b65e720bb6d57313&large_area=Z011`
+        `http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b65e720bb6d57313&large_area=Z011&name={this.name}`
     );
     const fooddata = item.data;
     this.name = fooddata.name
