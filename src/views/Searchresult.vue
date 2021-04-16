@@ -17,6 +17,11 @@ export default {
     views:{
         Search
     },
+    data(){
+        return{
+            name:"",
+        };
+    },
     props:["name"],
     async created(){
     const item = await axios.get(
