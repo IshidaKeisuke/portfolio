@@ -3,7 +3,7 @@
         <Header/>
         <div class = "item">
             <input placeholder="キーワード" v-model="text">
-            <button @click="$router.push('/Searchresult')">検索</button>
+            <button @click="transition()">検索</button>
         </div>
     </div>
 </template>
@@ -11,14 +11,20 @@
 <script>
 import Header from '../components/Header';
 export default {
+    name:"Search",
     components:{
         Header
     },  
+    methods:{
+        transition(){
+            this.$router.push({name:"Searchresult"})
+        }
+    },
     data(){
         return{
-            text:""
-        };
-    },
+            text:null,
+        }
+    }
 }
 </script>
 
