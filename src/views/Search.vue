@@ -17,7 +17,7 @@ export default {
     },  
     methods:{
         transition(){
-            this.$router.push({name:"Searchresult"})
+            this.$router.push({name:"Searchresult",params:{text:this.text}})
         }
     },
     data(){

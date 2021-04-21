@@ -35,6 +35,11 @@ const routes = [{
     path:'/Searchresult',
     name:'Searchresult',
     component:Searchresult
+  },{
+    path:'/Searchresult/:text',
+    name:'Searchresult',
+    component: Searchresult,
+    props:true  
   }
 ]
 
