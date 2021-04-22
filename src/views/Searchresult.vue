@@ -11,8 +11,8 @@ import Search from '../views/Search';
 import axios from "axios"
 
 export default {
-    name:"Searchresult",
-    props:["name"],
+    name:"Search",
+    props:["text"],
     components:{
         Header
     },
