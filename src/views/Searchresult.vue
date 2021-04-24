@@ -1,7 +1,7 @@
 <template>
     <div class = "wrapper">
         <Header/>
-        <h2>{{name}}についての情報</h2>
+        <h2>{{text}}についての情報</h2>
     </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
         Search
     },
     created(){
-        axios.get(`http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b65e720bb6d57313&large_area=Z011&name={this.name}`)
+        axios.get(`http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b65e720bb6d57313&large_area=Z011&name=${this.text}`)
         .then((response) => console.log(response));
     }
     // async created(){
