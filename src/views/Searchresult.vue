@@ -20,7 +20,7 @@ export default {
         Search
     },
     created(){
-        axios.get(`http://webservice.recruit.co.jp/hotpepper/gourmet/v1/?key=b65e720bb6d57313&large_area=Z011&text=${this.text}`)
+        axios.get(`/v1/?key=b65e720bb6d57313&keyword&text=${this.text}`)
         .then((response) => console.log(response));
     }
     // async created(){
