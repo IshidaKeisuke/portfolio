@@ -22,7 +22,7 @@ export default {
     },
     data(){
         return{
-            text:null,
+            text:"",
         }
     }
 }
