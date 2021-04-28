@@ -2,7 +2,11 @@
     <div class = "wrapper">
         <Header/>
         <h2>{{text}}についての情報</h2>
-        <p v-for="(val,key) in info" :key="key">{{info}}</p>
+        <!-- <li>{{main}}</li>
+        <li>{{temp}}</li>
+        <li>{{humidity}}</li>
+        <li>{{speed}}</li> -->
+        <p v-for="(value,key) in info" :key="key">{{info}}</p>
     </div>
 </template>
 
@@ -14,7 +18,7 @@ import axios from "axios"
 export default {
     data(){
         return{
-            info:[],
+            info: [],
         }
     },
     name:"Search",
