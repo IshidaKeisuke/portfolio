@@ -1,3 +1,3 @@
 <template>
-    <p>THIS INFORMATION IS NOT FOUND    </p>
+    <p>THIS INFORMATION IS NOT FOUND</p>
 </template>
