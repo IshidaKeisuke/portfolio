@@ -6,7 +6,6 @@ import Login from '../views/Login.vue'
 import Search from '../views/Search.vue'
 import Searchresult from '../views/Searchresult.vue'
 import NotFound from '../views/404.vue'
-import { component } from 'vue/types/umd'
 
 
 Vue.use(VueRouter)

@@ -2,10 +2,6 @@
     <div class = "wrapper">
         <Header/>
         <h2>{{text}}についての情報</h2>
-        <!-- <li>{{main}}</li>
-        <li>{{temp}}</li>
-        <li>{{humidity}}</li>
-        <li>{{speed}}</li> -->
         <p v-for="(value,key) in info" :key="key">{{info}}</p>
     </div>
 </template>
@@ -30,9 +26,12 @@ export default {
         Search
     },
     mounted :function(){
-        axios.get(`/v1/?key=b65e720bb6d57313&large_area=Z011&format=json&name=${this.text}&this.info=response.data.results.shop`)
+        axios.get(`/v1/?key=b65e720bb6d57313&large_area=Z011&format=json&name=${this.text}&name=${this.info} = response.data.results.shop`)
         .then(response => {console.log(response.data.results.shop)})
         .catch(response=>console.log(response));
+    return{
+        item:"",
+    }
     }
 }
 </script>
