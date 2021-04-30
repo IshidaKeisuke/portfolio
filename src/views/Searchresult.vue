@@ -14,7 +14,8 @@ import axios from "axios"
 export default {
     data(){
         return{
-            info: [],
+            access: "",
+            info:[]
         }
     },
     name:"Search",
@@ -26,12 +27,13 @@ export default {
         Search
     },
     mounted :function(){
-        axios.get(`/v1/?key=b65e720bb6d57313&large_area=Z011&format=json&name=${this.text}&name=${this.info} = response.data.results.shop`)
-        .then(response => {console.log(response.data.results.shop)})
-        .catch(response=>console.log(response));
-    return{
-        item:"",
-    }
+            const item = axios.get(`/v1/?key=b65e720bb6d57313&large_area=Z011&format=json&name=${this.text}`)
+            .then(
+            response => {console.log(response.data.results.shop)
+            this.info = response.data.results.shop})
+            .catch(response=>console.log(response));
+    const fooddata = item.data
+    this.access = fooddata.access   
     }
 }
 </script>
