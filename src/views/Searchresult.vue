@@ -3,7 +3,7 @@
         <Header/>
         <h2>{{text}}についての情報</h2>
         <p v-for="(value,key) in info" :key="key"></p>
-        <p>{{value}}</p>
+        <p>{{value.access}}</p>
     </div>
 </template>
 
