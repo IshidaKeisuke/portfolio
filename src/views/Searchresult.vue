@@ -3,6 +3,7 @@
         <Header/>
         <h2>{{text}}についての情報</h2>
         <p v-for="(value,key) in info" :key="key"></p>
+        <p>{{value}}</p>
     </div>
 </template>
 
@@ -15,6 +16,7 @@ export default {
     data(){
         return{
             access: [],
+            info:[]
         }
     },
     name:"Search",
