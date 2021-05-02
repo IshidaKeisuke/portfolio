@@ -14,7 +14,7 @@
                 <td>{{value.name}}</td>
                 <td>{{value.access}}</td>
                 <td>{{value.address}}</td>
-                <td>{{value.capacity}}</td>
+                <td>{{value.capacity}}人</td>
                 <td>{{value.genre.name}}</td>
             </tr>
         </table>
