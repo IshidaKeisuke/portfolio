@@ -6,6 +6,7 @@ import Login from '../views/Login.vue'
 import Search from '../views/Search.vue'
 import Searchresult from '../views/Searchresult.vue'
 import NotFound from '../views/404.vue'
+import { from } from 'core-js/core/array'
 
 
 Vue.use(VueRouter)
@@ -51,4 +52,19 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to,from,next) => {
+  if(
+    to.matched.some((record) => record.meta.requiresAuth) &&
+    !store.state.auth
+  ){
+    next({
+      path: "/",
+      query: {
+        redirect: to.fullPath,
+      },
+    });
+  } else {
+    next();
+  }
+})
 export default router

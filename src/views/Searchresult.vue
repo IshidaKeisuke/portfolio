@@ -2,11 +2,22 @@
     <div class = "wrapper">
         <Header/>
         <h2>{{text}}についての情報</h2>
-        <p v-for="(value,key) in info" :key="key">
-           <th>{{value.access}}</th>
-           <td>{{value.address}}</td>
-           <td>{{value.capacity}}</td>
-        </sp>
+        <table v-for="(value,key) in info" :key="key">
+            <tr>
+                <th>店名</th>
+                <th>最寄り駅</th>
+                <th>住所</th>
+                <th>収容可能人数</th>
+                <th>ジャンル</th>
+            </tr>
+            <tr>
+                <td>{{value.name}}</td>
+                <td>{{value.access}}</td>
+                <td>{{value.address}}</td>
+                <td>{{value.capacity}}</td>
+                <td>{{value.genre.name}}</td>
+            </tr>
+        </table>
         
     </div>
 </template>
@@ -39,3 +50,18 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.wrapper h2{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 5%;
+}
+table{
+    margin: 6%;
+}
+th,td{
+    border: 1px solid #aaaaaa;
+    padding: 15px;
+}
+</style>
