@@ -5,8 +5,8 @@
             <div class = "card">
                 <p>ログイン</p>
                 <div class = "form">
-                    <input placeholder="メールアドレス" type = "email">
-                    <input placeholder="パスワード" type="password">
+                    <input placeholder="メールアドレス" type = "email" v-model="email"/>
+                    <input placeholder="パスワード" type="password" v-model="password"/>
                     <button>ログイン</button>
                 </div>
             </div>
@@ -19,6 +19,12 @@ import Header from '../components/Header';
 export default {
   components: {
     Header
+  },
+  data(){
+      return{
+          email:"",
+          password:"",
+      }
   }
 };
 </script>
