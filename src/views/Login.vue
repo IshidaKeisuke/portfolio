@@ -7,7 +7,7 @@
                 <div class = "form">
                     <input placeholder="メールアドレス" type = "email" v-model="email"/>
                     <input placeholder="パスワード" type="password" v-model="password"/>
-                    <button>ログイン</button>
+                    <button @click="auth">ログイン</button>
                 </div>
             </div>
         </div>
@@ -24,6 +24,14 @@ export default {
       return{
           email:"",
           password:"",
+      }
+  },
+  methods:{
+      auth(){
+          this.$store.dispatch("Login",{
+              email:this.email,
+              password:this.password
+          });
       }
   }
 };
