@@ -26,14 +26,14 @@ export default {
       profile:"",
       email:"",
       password:""
-    }
+    };
   },
   components: {
     Header
   },
   methods:{
     auth(){
-      axios.post("https://jp.heroku.com/api/register",{
+      axios.post("floating-sands-52244.herokuapp.com/api/register",{
         name:this.name,
         profile:this.profile,
         email:this.email,

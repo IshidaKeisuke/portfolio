@@ -4,10 +4,10 @@
         <h2>{{text}}についての情報</h2>
         <table v-for="(value,key) in info" :key="key">
             <tr>
-                <th>店名
-                <th>最寄り駅
-                <th>住所
-                <th>収容可能人数
+                <th>店名</th>
+                <th>最寄り駅</th>
+                <th>住所</th>
+                <th>収容可能人数</th>
                 <th>ジャンル</th>
             </tr>
             <tr>
