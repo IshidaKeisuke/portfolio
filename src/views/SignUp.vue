@@ -6,7 +6,6 @@
         <p>新規登録</p>
         <div class = "form">
             <input placeholder="ユーザーネーム" type = "text" v-model="name" />
-            <input placeholder="プロフィール" type = "text" v-model="profile" />
             <input placeholder="メールアドレス" type = "email" v-model="email" />
             <input placeholder="パスワード" type = "password" v-model="password" />
             <button @click="auth">新規登録</button>
@@ -26,14 +25,14 @@ export default {
       profile:"",
       email:"",
       password:""
-    };
+    };    
   },
   components: {
     Header
   },
   methods:{
     auth(){
-      axios.post("floating-sands-52244.herokuapp.com/api/register",{
+      axios.post("https://afternoon-chamber-03940.herokuapp.com/api/register",{
         name:this.name,
         profile:this.profile,
         email:this.email,

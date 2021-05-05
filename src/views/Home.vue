@@ -24,6 +24,10 @@
   color: white;
   text-align: center;
   cursor: pointer;
+  background-color: black;
+  border-radius: 20px;
+  padding: 20px;
+  opacity: 2;
 }
 </style>
 
@@ -36,11 +40,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.content p{
-  background-color: black;
-  border-radius: 20px;
-  padding: 10px 20px;
-  opacity: 2;
-}
-</style>
