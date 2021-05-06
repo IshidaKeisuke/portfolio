@@ -36,7 +36,7 @@ export default {
   },
   methods:{
     auth(){
-      axios.post("https://agile-cliffs-64408.herokuapp.com/api/register",{
+      axios.post("https://agile-cliffs-64408.herokuapp.com",{
         name:this.name,
         profile:this.profile,
         email:this.email,
