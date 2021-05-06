@@ -18,6 +18,7 @@
 <script>
 import axios from 'axios';
 import Header from '../components/Header';
+
 export default {
   data(){
     return{
@@ -26,13 +27,16 @@ export default {
       email:"",
       password:""
     };    
+  //return axios.create({
+    //baseURL:'http://localhost:8080/'
+  //})
   },
   components: {
     Header
   },
   methods:{
     auth(){
-      axios.post("https://afternoon-chamber-03940.herokuapp.com/api/register",{
+      axios.post("https://agile-cliffs-64408.herokuapp.com/api/register",{
         name:this.name,
         profile:this.profile,
         email:this.email,

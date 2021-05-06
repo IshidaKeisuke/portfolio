@@ -14,7 +14,7 @@ Vue.use(VueRouter)
 const routes = [{
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
   },{
     path: '/about',
     name: 'About',
@@ -41,7 +41,7 @@ const routes = [{
     props:true  
   },{
     path:'*',
-    name:'notFound',
+    name:'NotFound',
     component:NotFound,
   }
 ]

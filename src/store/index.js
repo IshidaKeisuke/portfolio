@@ -29,14 +29,14 @@ export default new Vuex.Store({
   actions: {
     async login({ commit }, { email, password }) {
       const responseLogin = await axios.post(
-        "floating-sands-52244.herokuapp.com//api/login",
+        "https://agile-cliffs-64408.herokuapp.com/api/login",
         {
           email: email,
           password: password,
         }
       );
       const responseUser = await axios.get(
-        "floating-sands-52244.herokuapp.com//api/user",
+        "https://agile-cliffs-64408.herokuapp.com/api/user",
         {
           params: {
             email: email,
@@ -49,7 +49,7 @@ export default new Vuex.Store({
     },
     logout({ commit }) {
       axios
-        .post("floating-sands-52244.herokuapp.com//api/logout", {
+        .post("https://agile-cliffs-64408.herokuapp.com/api/logout", {
           auth: this.state.auth,
         })
         .then((response) => {
