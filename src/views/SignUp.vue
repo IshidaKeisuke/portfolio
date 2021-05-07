@@ -23,7 +23,6 @@ export default {
   data(){
     return{
       name:"",
-      profile:"",
       email:"",
       password:""
     };    
@@ -36,7 +35,7 @@ export default {
   },
   methods:{
     auth(){
-      axios.post("https://agile-cliffs-64408.herokuapp.com/api/register",{
+      axios.post("https://afternoon-falls-65270.herokuapp.com/api/register",{
         name:this.name,
         profile:this.profile,
         email:this.email,
