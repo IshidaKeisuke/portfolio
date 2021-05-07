@@ -37,7 +37,6 @@ export default {
     auth(){
       axios.post("https://afternoon-falls-65270.herokuapp.com/api/register",{
         name:this.name,
-        profile:this.profile,
         email:this.email,
         password:this.password
       })

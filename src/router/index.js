@@ -1,15 +1,15 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
-import SignUp from '../views/SignUp.vue'
-import Login from '../views/Login.vue'
-import Search from '../views/Search.vue'
-import Searchresult from '../views/Searchresult.vue'
-import NotFound from '../views/404.vue'
-import store from '../store/index'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import SignUp from '../views/SignUp.vue';
+import Login from '../views/Login.vue';
+import Search from '../views/Search.vue';
+import Searchresult from '../views/Searchresult.vue';
+import NotFound from '../views/404.vue';
+import store from '../store/index';
 
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [{
     path: '/',
