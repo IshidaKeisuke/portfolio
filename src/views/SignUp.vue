@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     auth(){
-      axios.post("boiling-waters-87189.herokuapp.com/api/register",{
+      axios.post("boiling-waters-87189.herokuapp.com/api/Register",{
         name:this.name,
         email:this.email,
         password:this.password
