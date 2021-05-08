@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     auth(){
-      axios.post("https://afternoon-falls-65270.herokuapp.com/api/register",{
+      axios.post("https://dry-brook-70064.herokuapp.com/api/register",{
         name:this.name,
         email:this.email,
         password:this.password
