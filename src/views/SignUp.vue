@@ -37,6 +37,7 @@ export default {
     auth(){
       axios.post("https://radiant-depths-46964.herokuapp.com/api/register",{
         name:this.name,
+        profile:this.profile,
         email:this.email,
         password:this.password
       })

@@ -5,6 +5,7 @@ import SignUp from '../views/SignUp.vue';
 import Login from '../views/Login.vue';
 import Search from '../views/Search.vue';
 import Searchresult from '../views/Searchresult.vue';
+import Profile from '../views/Profile.vue';
 import NotFound from '../views/404.vue';
 import store from '../store/index';
 
@@ -43,7 +44,11 @@ const routes = [{
     path:'*',
     name:'NotFound',
     component:NotFound,
-  }
+  },{
+    path:'/Profile',
+    name:'Profile',
+    component:Profile
+  },
 ]
 
 const router = new VueRouter({

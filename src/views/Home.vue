@@ -11,7 +11,8 @@
   </div>
 </template>
 
-<style>
+<style scoped>
+
 .main{
   background: url("https://images.unsplash.com/photo-1525622471818-78bd7e8afc7b?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80");
   padding: 30%;
@@ -30,6 +31,7 @@
   opacity: 2;
 }
 </style>
+
 
 <script>
 import Header from '../components/Header';

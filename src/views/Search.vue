@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 input{
     padding: 8px 20px 8px 7px;
     border-radius: 10px;
@@ -44,4 +44,4 @@ button{
     padding: 25%;
     background-position: left;
 }
-</style>
+</style>>
