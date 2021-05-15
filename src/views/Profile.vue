@@ -5,7 +5,9 @@
             <p>YOUR PROFILE</p>
         </div>
         <div class = "profile">
-            <p>{{name}}</p>
+            <p>{{user.name}}</p>
+            <p>{{user.email}}</p>
+            <button type="button" @click="Logout"></button>
         </div>
     </div>
 </template>
@@ -23,7 +25,13 @@ export default{
             active:true,
             name:this.$store.state.user.name,
             profile:this.$store.state.user.profile,
+            user:"",
         };
+    },
+    mounted(){
+        axios.get("/api/user").then(response => {
+            this.user = response.data;
+        });
     },
     methods:{
         edit(){
@@ -40,7 +48,19 @@ export default{
             }
             this.active = !this.active;
         }
-    }
+    },
+    logout(){
+        axios
+            .post("api/Logout")
+                .then(response=> {
+                    console.log(response);
+                    localStorage.removeItem("auth");
+                    this.$router.push("/Login");
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
 };
 </script>
 

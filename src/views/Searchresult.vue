@@ -18,6 +18,7 @@
                 <td>{{value.genre.name}}</td>
             </tr>
         </table>   
+        <a href="http://webservice.recruit.co.jp/"><img src="http://webservice.recruit.co.jp/banner/hotpepper-s.gif" alt="ホットペッパー Webサービス" width="135" height="17" border="0" title="ホットペッパー Webサービス"></a>
     </div>
 </template>
 
@@ -41,7 +42,7 @@ export default {
         Search
     },
     mounted :function(){
-            axios.get(`/v1/?key=b65e720bb6d57313&large_area=Z011&format=json&name=${this.text}`)
+            axios.get(`/v1/?key=b65e720bb6d57313&keyword&large_area=Z011&format=json&name=${this.text}`)
             .then(
             response => {console.log(response.data.results.shop)
                 this.info = response.data.results.shop})

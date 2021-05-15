@@ -6,7 +6,14 @@
                 <p>ログイン</p>
                 <div class = "form">
                     <input placeholder="メールアドレス" type = "email" v-model="email"/>
+                    <span v-if="errors.email">
+                        {{ errors.email[0] }}
+                    </span>
                     <input placeholder="パスワード" type="password" v-model="password"/>
+                    <span v-if="errors.email">
+                        {{ errors.email[0] }}
+                    </span>
+
                     <button @click="auth">ログイン</button>
                 </div>
             </div>
@@ -24,7 +31,8 @@ export default {
       return{
           email:"",
           password:"",
-      }
+          errors:[]
+      };
   },
   methods:{
       auth(){
@@ -32,7 +40,24 @@ export default {
               email:this.email,
               password:this.password
           });
-      }
+      },
+      login() {
+            axios.get("/sanctum/csrf-cookie").then(response => {
+                axios
+                    .post("/api/login", {
+                        email: this.email,
+                        password: this.password
+                    })
+                    .then(response => {
+                        console.log(response);
+                        localStorage.setItem("auth", "ture");
+                        this.$router.push("/about");
+                    })
+                    .catch(error => {
+                        this.errors = error.response.data.errors;
+                    });
+            });
+        }
   }
 };
 </script>

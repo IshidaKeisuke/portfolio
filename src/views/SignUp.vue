@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     auth(){
-      axios.post("https://radiant-depths-46964.herokuapp.com/api/register",{
+      axios.post("https://morning-brushlands-58170.herokuapp.com/api/register",{
         name:this.name,
         profile:this.profile,
         email:this.email,
