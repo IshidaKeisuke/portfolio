@@ -13,7 +13,6 @@
                     <span v-if="errors.email">
                         {{ errors.email[0] }}
                     </span>
-
                     <button @click="auth">ログイン</button>
                 </div>
             </div>
