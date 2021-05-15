@@ -39,25 +39,9 @@ export default {
               email:this.email,
               password:this.password
           });
-      },
-      login() {
-            axios.get("/sanctum/csrf-cookie").then(response => {
-                    post("/api/login", {
-                        email: this.email,
-                        password: this.password
-                    })
-                    .then(response => {
-                        console.log(response);
-                        localStorage.setItem("auth", "ture");
-                        this.$router.push("/about");
-                    })
-                    .catch(error => {
-                        this.errors = error.response.data.errors;
-                    });
-            });
-        }
+      }
   }
-};
+}
 </script>
 
 
